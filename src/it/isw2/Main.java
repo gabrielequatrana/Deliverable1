@@ -40,8 +40,8 @@ public class Main {
 		String lastDate = dates.get(dates.size()-1);
 		
 		while (!date.equals(lastDate)) {
-			int year = Integer.parseInt(date.substring(0, 4));
-			int month = Integer.parseInt(date.substring(5));
+			var year = Integer.parseInt(date.substring(0, 4));
+			var month = Integer.parseInt(date.substring(5));
 			
 			int newMonth = month+1;
 			int newYear = year;

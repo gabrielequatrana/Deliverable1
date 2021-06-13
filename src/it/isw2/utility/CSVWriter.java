@@ -20,7 +20,7 @@ public class CSVWriter {
 			fileWriter.append(line.replace(";", DELIM));
 			
 			for (String date : dates) {
-				int count = 0;
+				var count = 0;
 				for (Ticket ticket : tickets) {
 					if (ticket.getDate().equals(date)) {
 						count++;
