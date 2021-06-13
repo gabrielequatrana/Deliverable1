@@ -1,0 +1,20 @@
+language: 
+    - java
+    
+jdk:
+    - openjdk15
+    
+os:
+    - linux
+    
+dist:
+    - xenial
+    
+addons:
+  sonarcloud:
+    organization: "gabrielequatrana"
+    token: "5e6c60650d66119f5ddab8a9285e63517b3fede9"
+    
+script: 
+    - ant build
+    - sonar-scanner
