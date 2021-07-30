@@ -19,8 +19,8 @@ import it.isw2.utility.Utilities;
 
 public class Main {
 	
-	private static String projName = "QPID";
-	private static String repo = projName + "/.git";
+	private static final String PROJ_NAME = "QPID";
+	private static String repo = PROJ_NAME + "/.git";
 	
 	public static void main(String[] args) throws IOException, JSONException {
 		
@@ -33,7 +33,7 @@ public class Main {
 		// Clone selected repository
 		Utilities.logMsg("Cloning repository\n");
 		try {
-			if (!Files.exists(Paths.get(projName))) cloneProject(projName);
+			cloneProject(PROJ_NAME);
 		} catch (GitAPIException e) {
 			Utilities.logError(e);
 		}
@@ -49,7 +49,7 @@ public class Main {
 		// Get all project tickets with at least one associated commit
 		Utilities.logMsg("Getting new feature tickets\n");
 		try {
-			tickets = TicketController.getFixedNewFeatures(projName);
+			tickets = TicketController.getFixedNewFeatures(PROJ_NAME);
 			CommitController.selectTicketsWithCommit(tickets, commits);
 		} catch (IOException e) {
 			Utilities.logError(e);
@@ -71,7 +71,7 @@ public class Main {
 
 		// Print result on csv file
 		Utilities.logMsg("Making file csv\n");
-		CSVWriter.printCSV(dates, tickets, projName);
+		CSVWriter.printCSV(dates, tickets, PROJ_NAME);
 		
 		// Stop program
 		Utilities.logMsg("Stopping program\n");
@@ -107,8 +107,10 @@ public class Main {
 	}
 	
 	private static void cloneProject(String projName) throws GitAPIException {
-		String url = "https://github.com/apache/" + projName;
-		Git git = Git.cloneRepository().setURI(url).call();
-		git.close();
+		if (!Files.exists(Paths.get(PROJ_NAME))) {
+			String url = "https://github.com/apache/" + projName;
+			Git git = Git.cloneRepository().setURI(url).call();
+			git.close();
+		}
 	}
 }
