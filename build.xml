@@ -12,10 +12,16 @@
     <path id="Deliverable1.classpath">
         <pathelement location="bin"/>
         <pathelement location="lib/java-json.jar"/>
+        <pathelement location="lib/jgit.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.9.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.9.jar"/>
     </path>
     <path id="run.Main (7).classpath">
         <path refid="Deliverable1.classpath"/>
         <pathelement location="lib/java-json.jar"/>
+        <pathelement location="lib/jgit.jar"/>
+        <pathelement location="lib/slf4j-api-1.7.9.jar"/>
+        <pathelement location="lib/slf4j-simple-1.7.9.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
