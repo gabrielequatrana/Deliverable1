@@ -2,7 +2,7 @@
 Gabriele Quatrana 0306403
 
 # Configurazione
-Specificare il nome del progetto da analizzare nel parametro ```PROJ_NAME``` nella classe ```Main```
+Specificare il nome del progetto da analizzare nel parametro ```PROJ_NAME``` nella classe ```Main.java```
 
 # Manuale
-Lanciare ```src/it/isw2/Main.java``` per analizzare il progetto e generare il report che contiene il numero di new feature fixed per ogni mese nella directory ```out/projname.csv```
+Lanciare ```src/it/isw2/Main.java``` per analizzare il progetto e generare il report che contiene il numero di new feature fixed per ogni mese nella directory ```out/"projname".csv```
