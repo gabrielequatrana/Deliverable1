@@ -1,5 +1,6 @@
 package it.isw2;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -20,7 +21,8 @@ import it.isw2.utility.Utilities;
 public class Main {
 	
 	private static final String PROJ_NAME = "QPID";
-	private static String repo = PROJ_NAME + "/.git";
+	private static String repoDir = "proj/" + PROJ_NAME.toLowerCase();
+	private static String repo = repoDir + "/.git";
 	
 	public static void main(String[] args) throws IOException, JSONException {
 		
@@ -107,9 +109,9 @@ public class Main {
 	}
 	
 	private static void cloneProject(String projName) throws GitAPIException {
-		if (!Files.exists(Paths.get(PROJ_NAME))) {
-			String url = "https://github.com/apache/" + projName;
-			Git git = Git.cloneRepository().setURI(url).call();
+		if (!Files.exists(Paths.get(repoDir))) {
+			String url = "https://github.com/apache/" + projName.toLowerCase();
+			Git git = Git.cloneRepository().setURI(url).setDirectory(new File(repoDir)).call();
 			git.close();
 		}
 	}
