@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,6 +19,8 @@ public class Utilities {
 	private Utilities() {
 
 	}
+	
+	private static Logger logger = Logger.getLogger(Utilities.class.getName());
 
 	private static String readAll(Reader rd) throws IOException {
 		var sb = new StringBuilder();
@@ -45,5 +49,13 @@ public class Utilities {
 		} finally {
 			is.close();
 		}
+	}
+	
+	public static void logError(Exception e) {
+		logger.log(Level.SEVERE, "Something went wrong: {0}", e.toString());
+	}
+	
+	public static void logMsg(String msg) {
+		logger.log(Level.INFO, msg);
 	}
 }

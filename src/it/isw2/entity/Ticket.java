@@ -2,24 +2,24 @@ package it.isw2.entity;
 
 public class Ticket {
 	
-	private String key;
+	private String id;
 	private String date;
 
 	public Ticket(String key, String date) {
-		this.key = key;
+		this.id = key;
 		this.date = date;
 	}
 	
-	public String getKey() {
-		return key;
+	public String getId() {
+		return id;
 	}
 	
 	public String getDate() {
 		return this.date;
 	}
 
-	public void setKey(String key) {
-		this.key = key;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public void setDate(String date) {

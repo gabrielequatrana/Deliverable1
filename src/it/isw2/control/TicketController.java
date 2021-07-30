@@ -12,9 +12,9 @@ import org.json.JSONObject;
 import it.isw2.entity.Ticket;
 import it.isw2.utility.Utilities;
 
-public class JiraController {
+public class TicketController {
 
-	private JiraController() {
+	private TicketController() {
 
 	}
 
