@@ -1,6 +1,10 @@
 # Deliverable1 ISW2 [![Build Status](https://travis-ci.com/gabrielequatrana/Deliverable1.svg?branch=main)](https://travis-ci.com/gabrielequatrana/Deliverable1)	[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=gabrielequatrana_Deliverable1&metric=code_smells)](https://sonarcloud.io/dashboard?id=gabrielequatrana_Deliverable1)
 Gabriele Quatrana 0306403
 
+# Link
+- [Travis](https://travis-ci.com/github/gabrielequatrana/Deliverable1)
+- [SonarCloud](https://sonarcloud.io/dashboard?id=gabrielequatrana_Deliverable1)
+
 # Configurazione
 Specificare il nome del progetto da analizzare nel parametro ```PROJ_NAME``` nella classe ```Main.java```
 
