@@ -17,7 +17,13 @@ public class CommitController {
 		
 	}
 	
-	// Get commits of a repository
+	/**
+	 * Get commits of a repository
+	 * @param repoPath
+	 * @return commits
+	 * @throws IOException
+	 * @throws GitAPIException
+	 */
 	public static List<RevCommit> getAllCommits(Path repoPath) throws IOException, GitAPIException {
 		List<RevCommit> commits = new ArrayList<>();
 		try (Git git = Git.open(repoPath.toFile())) {
@@ -30,7 +36,11 @@ public class CommitController {
 		return commits;
 	}
 	
-	// Filter tickets without associated commit
+	/**
+	 * Filter tickets without associated commit
+	 * @param tickets
+	 * @param commits
+	 */
 	public static void selectTicketsWithCommit(List<Ticket> tickets, List<RevCommit> commits) {
 		
 		List<Ticket> goodTickets = new ArrayList<>();
@@ -44,6 +54,7 @@ public class CommitController {
 						|| message.contains(ticketID + " ") || message.contains(ticketID +":") || message.contains(ticketID +".")
 						|| message.contains(ticketID + "/") || message.endsWith(ticketID) || message.contains(ticketID + "]")
 						|| message.contains(ticketID+"_") || message.contains(ticketID + "-") || message.contains(ticketID + ")")) {
+					
 					goodTickets.add(ticket);
 				}
 			}

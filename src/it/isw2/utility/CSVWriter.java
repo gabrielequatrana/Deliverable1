@@ -14,7 +14,13 @@ public class CSVWriter {
 		
 	}
 
-	// Save on a CSV file the Process Control Chart data
+	/**
+	 * Saves on a CSV file the Process Control Chart data
+	 * @param dates
+	 * @param tickets
+	 * @param projName
+	 * @throws IOException
+	 */
 	public static void printCSV(List<String> dates, List<Ticket> tickets, String projName) throws IOException {
 		try (var fileWriter = new FileWriter("out/" + projName.toLowerCase() + ".csv")) {
 			var line = "Date;NumNewFeature\n";

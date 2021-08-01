@@ -18,7 +18,13 @@ public class TicketController {
 
 	}
 
-	// Create a list of Ticket based on the Rest Query passed
+	/**
+	 * Create a list of Ticket based on the Rest query
+	 * @param projName
+	 * @return tickets
+	 * @throws JSONException
+	 * @throws IOException
+	 */
 	public static List<Ticket> getFixedNewFeatures(String projName) throws JSONException, IOException {
 
 		Integer j = 0;

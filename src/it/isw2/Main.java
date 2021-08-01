@@ -79,7 +79,10 @@ public class Main {
 		Utilities.logMsg("Stopping program\n");
 	}
 	
-	// Add to month list the dates not included in tickets
+	/**
+	 * Adds to month list the dates not included in tickets
+	 * @param dates
+	 */
 	private static void fillMonthList(List<String> dates) {
 		String date = dates.get(0);
 		String lastDate = dates.get(dates.size()-1);
@@ -108,6 +111,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Clone a GIT project
+	 * @param projName
+	 * @throws GitAPIException
+	 */
 	private static void cloneProject(String projName) throws GitAPIException {
 		if (!Files.exists(Paths.get(repoDir))) {
 			String url = "https://github.com/apache/" + projName.toLowerCase();

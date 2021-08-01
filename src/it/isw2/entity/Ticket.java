@@ -1,9 +1,13 @@
 package it.isw2.entity;
 
+/**
+ * Entity that models a JIRA ticket
+ *
+ */
 public class Ticket {
 	
-	private String id;
-	private String date;
+	private String id;		// Ticket ID
+	private String date;	// Ticket creation date
 
 	public Ticket(String key, String date) {
 		this.id = key;
