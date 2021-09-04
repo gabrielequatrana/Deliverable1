@@ -1,12 +1,12 @@
-# Deliverable 1 ISW2 [![Build Status](https://travis-ci.com/gabrielequatrana/Deliverable1.svg?branch=main)](https://travis-ci.com/gabrielequatrana/Deliverable1)	[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=gabrielequatrana_Deliverable1&metric=code_smells)](https://sonarcloud.io/dashboard?id=gabrielequatrana_Deliverable1)
+# Deliverable 1 ISW2 [![Build Status](https://app.travis-ci.com/gabrielequatrana/Deliverable1.svg?branch=main)](https://app.travis-ci.com/github/gabrielequatrana/Deliverable1)	[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=gabrielequatrana_Deliverable1&metric=code_smells)](https://sonarcloud.io/dashboard?id=gabrielequatrana_Deliverable1)
 Gabriele Quatrana 0306403
 
 # Link
-- [Travis](https://travis-ci.com/github/gabrielequatrana/Deliverable1)
+- [Travis](https://app.travis-ci.com/github/gabrielequatrana/Deliverable1)
 - [SonarCloud](https://sonarcloud.io/dashboard?id=gabrielequatrana_Deliverable1)
 
 # Configurazione
 Specificare il nome del progetto da analizzare nel parametro ```PROJ_NAME``` nella classe ```Main.java```
 
 # Manuale
-Lanciare ```src/it/isw2/Main.java``` per analizzare il progetto e generare il dataset e le valutazioni su di esso nella directory ```out```
+Lanciare ```src/it/isw2/Main.java``` per analizzare il progetto e generare il dataset e il report nella directory ```out```

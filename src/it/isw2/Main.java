@@ -59,8 +59,8 @@ public class Main {
 
 		List<String> dates = new ArrayList<>();
 
-		// Count the occurrences of a month in the fixed new features list
-		Utilities.logMsg("Counting occurrences of a month\n");
+		// Make month list from tickets
+		Utilities.logMsg("Making month list\n");
 		for (Ticket b : tickets) {
 			if (!dates.contains(b.getDate())) {
 				dates.add(b.getDate());
